@@ -1,0 +1,14 @@
+name: EnderPearlCooldown
+main: fr.nivcoo.enderpearlcooldown.EnderPearlCooldown
+version: 1.0.0
+authors: [nivcoo]
+commands:
+  epc:
+    description: main command
+permissions:
+  enderpearlcooldown.bypass:
+    default: op
+    description: bypass the use check
+  enderpearlcooldown.reload:
+    default: op
+    description: reload the plugin
