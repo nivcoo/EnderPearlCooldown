@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -24,7 +25,10 @@ public class PlayerInteract implements Listener {
 
 		Player p = e.getPlayer();
 		ItemStack item = e.getItem();
-		if (p.hasPermission("enderpearlcooldown.bypass") || item.getType() != Material.ENDER_PEARL)
+		Action action = e.getAction();
+		if (p.hasPermission("enderpearlcooldown.bypass")
+				|| (action != Action.RIGHT_CLICK_AIR && action != Action.RIGHT_CLICK_BLOCK)
+				|| item.getType() != Material.ENDER_PEARL)
 			return;
 		String timeBeforeUseString = config.getString("time_before_use");
 		int multipleAmount = 1;
@@ -38,9 +42,9 @@ public class PlayerInteract implements Listener {
 		String UUID = p.getUniqueId().toString();
 		Long time = wait.get(UUID);
 
-		if (time == null) {
+		if (time == null)
 			wait.put(UUID, currentMillis);
-		} else {
+		else {
 			long timeInSecondBeforeUse = timeBeforeUse * multipleAmount;
 			if ((currentMillis - time) / 1000 > timeInSecondBeforeUse) {
 				wait.put(UUID, currentMillis);
