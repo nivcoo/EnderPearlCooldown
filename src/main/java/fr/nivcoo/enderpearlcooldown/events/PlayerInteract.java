@@ -57,7 +57,7 @@ public class PlayerInteract implements Listener {
 
 		int minutes = (int) (timeBeforeUse / 60);
 
-		timeBeforeUse -= (minutes * 60) - 1;
+		timeBeforeUse -= (minutes * 60);
 		int seconds = (int) timeBeforeUse;
 
 		String globalMessage = "";
