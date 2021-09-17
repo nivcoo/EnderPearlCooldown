@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>fr.nivcoo</groupId>
-	<artifactId>EnderPealCooldown</artifactId>
+	<artifactId>EnderPearlCooldown</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>EnderPealCooldown</name>
-	<url>https://github.com/nivcoo/EnderPealCooldown</url>
+	<name>EnderPearlCooldown</name>
+	<url>https://github.com/nivcoo/EnderPearlCooldown</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
