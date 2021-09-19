@@ -1,7 +1,7 @@
 name: EnderPearlCooldown
 main: fr.nivcoo.enderpearlcooldown.EnderPearlCooldown
 version: 1.0.0
-authors: [nivcoo]
+authors: [ nivcoo ]
 commands:
   epc:
     description: main command
